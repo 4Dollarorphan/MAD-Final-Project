@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorite Cars - Home</title>
+  <!-- Include ThemeRoller CSS -->
+  <link rel="stylesheet" href="themes/DarkMode_Red3.css">
+  <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css">
+  <!-- Include jQuery and jQuery UI -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 20px;
+    }
+    .grid-item {
+      text-align: center;
+      padding: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #4f1010;
+      color: white;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    .nav-bar {
+      background-color: #4f1010;
+      padding: 10px;
+      text-align: center;
+    }
+    .nav-bar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+    }
+    .nav-bar a:hover {
+      text-decoration: underline;
+    }
+    .header-custom {
+      background-color: #4f1010;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 0px;
+    }
+    .ui-button-custom {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px 20px;
+      margin: 5px;
+      color: white;
+      background-color: #4f1010; /* Red button color */
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .ui-button-custom:hover {
+      background-color: #c0392b; /* Darker red on hover */
+    }
+    .img {
+      background-color: #4f1010;
+      text-align: center;
+      width: 100px;
+      margin: -20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="nav-bar">
+    <a href="index.html">Home</a>
+    <a href="form.html">Add Favorite Car</a>
+    <a href="list.html">View Favorites</a>
+  </nav>
+
+  <!-- Header Section -->
+  <header class="header-custom ui-widget-header ui-corner-all">
+    <img src="Porsche-Logo.png" alt="Porshe-logo" class="img ui-image-custom ui-corner-all" >
+    <h1>Welcome to Favorite Cars!</h1>
+    <p>Explore the ultimate collection of all types of cars</p>
+  </header>
+
+  <!-- Main Content Section -->
+  <main>
+    <div class="panel ui-widget ui-corner-all">
+      <h2>Categories</h2>
+      <div class="grid-container">
+        <div class="grid-item ui-widget-content ui-corner-all">
+          <h3>Coupe</h3>
+          <a href="list.html" class="ui-button-custom">View Favorites</a>
+        </div>
+        <div class="grid-item ui-widget-content ui-corner-all">
+          <h3>Sedan</h3>
+          <a href="list.html" class="ui-button-custom">View Favorites</a>
+        </div>
+        <div class="grid-item ui-widget-content ui-corner-all">
+          <h3>Hatchback</h3>
+          <a href="list.html" class="ui-button-custom">View Favorites</a>
+        </div>
+        <div class="grid-item ui-widget-content ui-corner-all">
+          <h3>Wagon</h3>
+          <a href="list.html" class="ui-button-custom">View Favorites</a>
+        </div>
+        <div class="grid-item ui-widget-content ui-corner-all">
+          <h3>SUVs</h3>
+          <a href="list.html" class="ui-button-custom">View Favorites</a>
+        </div>
+        <div class="grid-item ui-widget-content ui-corner-all">
+          <h3>Trucks</h3>
+          <a href="list.html" class="ui-button-custom">View Favorites</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Favorite Cars. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorite Cars - List</title>
+  <!-- Include ThemeRoller CSS -->
+  <link rel="stylesheet" href="themes/DarkMode_Red3.css">
+  <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css">
+  <!-- Include jQuery and jQuery UI -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #4f1010;
+      color: white;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    .nav-bar {
+      background-color: #4f1010;
+      padding: 10px;
+      text-align: center;
+    }
+    .nav-bar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+    }
+    .nav-bar a:hover {
+      text-decoration: underline;
+    }
+    .header-custom {
+      background-color: #4f1010;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 0px;
+    }
+    .favorites-list {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .favorites-list h2 {
+      text-align: center;
+    }
+    .favorite-item {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="nav-bar">
+    <a href="index.html">Home</a>
+    <a href="form.html">Add Favorite Car</a>
+    <a href="list.html">View Favorites</a>
+  </nav>
+
+  <!-- Header Section -->
+  <header class="header-custom ui-widget-header ui-corner-all">
+    <h1>Favorite Cars List</h1>
+  </header>
+
+  <!-- List Section -->
+  <main>
+    <div class="favorites-list">
+      <h2>Your Favorites</h2>
+      <div id="favorites-container"></div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Favorite Cars. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Display favorite cars from localStorage
+    const favoritesContainer = document.getElementById('favorites-container');
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    if (favorites.length === 0) {
+      favoritesContainer.innerHTML = '<p>No favorite cars added yet!</p>';
+    } else {
+      favorites.forEach((car) => {
+        const div = document.createElement('div');
+        div.className = 'favorite-item';
+        div.textContent = `${car.name} (${car.category}): ${car.specs}`;
+        favoritesContainer.appendChild(div);
+      });
+    }
+  </script>
+</body>
+</html>
