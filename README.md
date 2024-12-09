@@ -44,4 +44,4 @@ The Favorite Cars Web App allows users to:
 Home Page (index.html) │ ├── Add Favorite Page (form.html) │ └── Form with fields for car name, category, and specs. │ └── Favorites Page (list.html) └── Displays saved favorite cars from Web Storage.
 
 ## URL
-The app is hosted on GitHub Pages at: [Favorite Cars Web App]((https://4dollarorphan.github.io/MAD-Final-Project/))
+The app is hosted on GitHub Pages at: [Favorite Cars Web App]([https://4dollarorphan.github.io/MAD-Final-Project/])
